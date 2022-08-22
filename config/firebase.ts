@@ -7,13 +7,13 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyDMm0tFTYbBArPfJpNXs7D8GbTu3AiIXp0",
-	authDomain: "messenger-2751a.firebaseapp.com",
-	projectId: "messenger-2751a",
-	storageBucket: "messenger-2751a.appspot.com",
-	messagingSenderId: "361804126608",
-	appId: "1:361804126608:web:1a1126d5d9eb7102e33b15"
-  };
+	apiKey: process.env.NEXT_PUBLIC_APIKEY,
+	authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+	projectId: process.env.NEXT_PUBLIC_PROJECTID,
+	storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
+	messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
+	appId: process.env.NEXT_PUBLIC_APPID
+}
 
 // Initialize Firebase
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig)
